@@ -1,6 +1,6 @@
 (executable
  (name      day4)
  (libraries core base str)
- (preprocess (pps ppx_sexp_conv ppx_hash ppx_compare))
+ (preprocess (pps ppx_sexp_conv ppx_hash ppx_compare ppx_deriving.show))
  )
 
