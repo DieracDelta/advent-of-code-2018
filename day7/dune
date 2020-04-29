@@ -1,0 +1,6 @@
+(executable
+ (name      day7)
+ (libraries core base str)
+ (preprocess (pps ppx_sexp_conv ppx_hash ppx_compare ))
+ )
+

@@ -5,7 +5,6 @@ open Base
 let file = "./input_1.txt"
 
 
-exception FillerException of string
 type modulo = Zero | One
 
 let remove_char input ~ele:(ele) =
@@ -56,8 +55,6 @@ let list_to_queue l =
 let get_reduced_len (input: string) : int =
   input |> String.to_list |> list_to_queue |> outer_loop |>  Core.Fdeque.length
 
-(* ideas from last night*)
-(* pair idea is unnecessary, just do the same thing but with an iterator *)
 let part_one : int =
   match create file |> Stdio.In_channel.input_line with
   | None -> -1
